@@ -1,59 +1,453 @@
-#header {
-  background-image: url("https://i.imgur.com/1cdZdfo.jpg");
-  display: flex;
-  flex-direction: row;
+.box-panel {
+  position: relative;
   height: 800px;
-  width: 100%;
+  width: 100vw;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+#header-menu {
+  position: absolute;
+  display: inline;
+  display: flex;
+  flex-direction: row;
+  top: 0;
+  right: 0;
+  margin: 0px;
+  font-family: "Cabin", sans-serif;
+}
+
+.header-buttons {
+  margin-top: 0%;
+  margin-right: 10px;
+  font-size: 30px;
+  font-family: "Cabin", sans-serif;
+}
+
+#header-image {
+  width: 100vw;
+  height: fit-content;
+}
+
+#first-name {
+  color: #e4e9ec;
+  font-family: "Lobster", cursive;
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 4s; /* Firefox < 16 */
+  -ms-animation: fadein 4s; /* Internet Explorer */
+  -o-animation: fadein 4s; /* Opera < 12.1 */
+  animation: fadein 4s;
+}
+
+#last-name {
+  color: #e4e9ec;
+  font-family: "Lobster", cursive;
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-animation: fadein 8s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 8s; /* Firefox < 16 */
+  -ms-animation: fadein 8s; /* Internet Explorer */
+  -o-animation: fadein 8s; /* Opera < 12.1 */
+  animation: fadein 8s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 #software {
-  font-family: 'Lobster', cursive;
+  padding-right: 100px;
+  font-family: "Lobster", cursive;
   margin: 0px;
   text-align: center;
+  color: #7987a1;
+  text-shadow: 2px 2px #c9d3df;
 }
+
 #engineer {
-  font-family: 'Lobster', cursive;
+  font-family: "Lobster", cursive;
   margin: 0px;
   padding-left: 100px;
   text-align: center;
-}
-#brand-statement {
-  width: 500px;
-  margin-left: 50px;
+  color: #7987a1;
+  text-shadow: 2px 2px #c9d3df;
 }
 
-#header ul{
+#header ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-#brand-statement {
-  height: 400px;
-  background: white;
-}
-.parallax {
-  background-image: url("https://i.imgur.com/RyCCjBS.jpg") ;
-  height: 400px; 
 
+#header-menu li a {
+  display: block;
+  padding: 8px 15px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #069;
+  border-right: 1px solid #ccc;
+}
+
+#brand-statement {
+  font-family: "Cabin", sans-serif;
+  font-size: large;
+  width: 500px;
+  margin-left: 50px;
+  color: #0f3742;
+}
+
+.parallax {
+  background-image: url("https://c0.wallpaperflare.com/preview/69/379/800/business-laptop-office-computer.jpg");
+  height: 400px;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .text {
   height: 300px;
   background-color: whitesmoke;
   font-size: 36px;
   margin: 0px;
-  /* border: 5px solid black; */
 }
-/* #footer {
-  color: white;
+
+#languages-header {
+  font-family: "Lobster", cursive;
+  margin-left: 75vw;
+  color: #7987a1;
+  text-shadow: 2px 2px #c9d3df;
+}
+
+#languages-images-box {
+  margin-left: 15%;
+}
+
+.languages-images {
+  width: 10vw;
+  height: 15vh;
+  margin: 0px 2px 0px 2px;
+}
+
+#brand-area-angle {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background-color: white;
+}
+
+#brand-area-angle:after {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: " ";
+  background: white;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform-origin: top left;
+  transform: skewY(4deg);
+}
+
+/* =======projects========= */
+
+#extra-box {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  height: 690px;
+  background-color: white;
+}
+
+#extra-box:after {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: " ";
+  background: white;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform-origin: bottom right;
+  transform: skewY(4deg);
+}
+
+#project-header {
+  font-family: "Lobster", cursive;
+  margin-top: 0px;
+  margin-left: 5%;
+  color: #7987a1;
+  text-shadow: 2px 2px #c9d3df;
+}
+
+.project-area {
+  margin: 0vw 5vw 0vw 5vw;
+}
+
+.projects-titles {
+  color: #7987a1;
+  font-family: "Cabin", sans-serif;
+  margin-top: 50px;
+}
+
+.projects-titles:hover {
+  color: #0f3742;
+}
+
+#project-row {
+  display: flex;
+  padding: 0vw 10vw 0vw 10vw;
+}
+
+.project-images {
+  height: 25vh;
+}
+
+.project-languages-images {
+  width: 5vw;
+  height: 10vh;
+  display: inline;
+}
+
+.github-link {
+  height: 8vh;
+  animation: blinker 2s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ========form======= */
+
+#contact-header {
+  font-family: "Lobster", cursive;
+  text-align: center;
+  color: #7987a1;
+  text-shadow: 2px 2px #c9d3df;
+}
+
+#contact-form {
+  width: 40vw;
+  margin-left: 30vw;
+  margin-bottom: 20px;
+}
+
+#contact-form-button {
+  width: 10vw;
+  margin-left: 15vw;
+}
+
+/* ======footer======= */
+
+#footer {
+  margin-top: 20px;
+  height: 9vh;
+  background-color: #f4d2d0;
+}
+
+#social-media-icons {
+  margin-left: 45%;
+}
+
+.footer-social-media-link {
+  height: 8vh;
+  width: 5vw;
+}
+
+@media only screen and (min-width: 416px) {
+  #moblie-projects-header-first {
+    display: none;
+  }
+  #moblie-projects-header-second {
+    display: none;
+  }
+
+  .slide-container {
+    display:none;
+  }
+}
+
+@media only screen and (max-width: 415px) {
+
+  /* --------------- header and menu ------------*/
+  #header-menu {
+    width: 100vw;
+  }
+
+  #header-menu li a {
+    font-size: 1em;
+  }
+
+  #header-image {
+    height: 300px;
+  }
+  #first-name {
+    top: 5%;
+    left: 35%;
+    text-shadow: 3px 3px black;
+  }
+  #last-name {
+    top: 12%;
+    left: 55%;
+    text-shadow: 3px 3px black;
+  }
+  /* ------------ Software Engineer -----------*/
+
+  #brand-area-angle {
+    width: 100vw;
+  }
+
+  #brand-area-angle:after {
+    width: 100vw;
+  }
+
+  #brand-statement {
+    width: 80vw;
+  }
+
+  #languages-header {
+    margin-top: 0px;
+    margin-left: 18vw;
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+  }
+
+  #languages-images-box {
+    margin-left: 15%;
+  }
+
+  .languages-images {
+    width: 9vw;
+    height: 5vh;
+    margin: 0px 2px 0px 2px;
+    padding-bottom: 10px;
+  }
+
+  /* ------- Parallax Effect ----------- */
+
+  .parallax {
+    background-image:  linear-gradient(0deg, rgba(158,90,99,1) 24%, rgba(244,210,208,1) 100%);
+    height: 150px;
+  }
+
+  /* ------- Recent Projects ---------- */
+
+  #project-header {
+    display: none;
+  }
+
+  #moblie-projects-header-first  {
+    padding-right: 100px;
+    font-family: "Lobster", cursive;
+    margin: 0px;
+    text-align: center;
+    color: #7987a1;
+    text-shadow: 2px 2px #c9d3df;
+  }
+  
+  #moblie-projects-header-second  {
+    font-family: "Lobster", cursive;
+    margin: 0px;
+    padding-left: 100px;
+    text-align: center;
+    color: #7987a1;
+    text-shadow: 2px 2px #c9d3df;
+  }
+
+.slide-container {
+  height: 500px;
+}
+
+.each-slide div {
+  margin-top: 8px;
+  height: 400px;
+  background-size: 100% 100%;
+}
+
+.project-title {
+  font-family: "Lobster", cursive;
+  color: #7987a1;
+  text-shadow: 2px 2px #c9d3df;
+  margin: 0% 35%
+}
+
+#click-directions {
+  font-size: 2em;
+  font-family: "Cabin", sans-serif;
+  color: #7987a1;
+  animation: blinker 1s linear infinite;
+  margin: 0% 0vw 0vh 15vw;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.react-slideshow-container div {
   margin: 0px;
-  background-color: black;
-} */
-/* #footer p{
-  margin: 0;
-} */
+}
+
+  .project-area {
+    display: none;
+  }
+
+  .project-languages-images {
+    width: 9vw;
+    height: 5vh;
+    margin: 0px 2px 0px 2px;
+  }
+
+  .github-link {
+    width: 9vw;
+    height: 4vh;
+    margin: 0px 2px 0px 2px;
+  }
+
+  /* ------ Contact Form -------- */
+
+  #contact-form {
+    width: 70vw;
+    margin-left: 15vw;
+  }
+
+  #contact-form-button {
+    width: 40vw
+  }
+
+  /* ------ Footer -------- */
+
+  #footer {
+    height: 5vh;
+  }
+
+  .footer-social-media-link {
+    height: 5vh;
+    width: 10vw;
+  }
+  #social-media-icons {
+    margin-left: 40%;
+  }
+}
+
